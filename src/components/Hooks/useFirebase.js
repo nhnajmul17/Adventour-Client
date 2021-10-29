@@ -1,6 +1,6 @@
 import initializeAuthentication from "../Firebase/firebase.init"
 
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, updateProfile, signOut, onAuthStateChanged } from "firebase/auth";
 import { useEffect, useState } from "react";
 
 
@@ -13,18 +13,37 @@ const useFirebase = () => {
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(true);
 
+    const setUserName = (name) => {
+        updateProfile(auth.currentUser, { displayName: name })
+            .then(result => { })
+    }
+
+    const verification = () => {
+        sendEmailVerification(auth.currentUser)
+            .then(() => { })
+    }
+
+
+
+    const handleRegister = (email, password) => {
+
+        return createUserWithEmailAndPassword(auth, email, password)
+    }
+
+
+
+    const handleLogin = (email, password) => {
+
+        return signInWithEmailAndPassword(auth, email, password)
+
+    }
+
+
     const googleSignIn = () => {
         setLoading(true)
-
         const googleProvider = new GoogleAuthProvider();
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
-                setUser(result.user)
-            })
-            .catch(error => {
-                setError(error.message)
-            })
-            .finally(() => setLoading(false))
+        return signInWithPopup(auth, googleProvider)
+
     }
 
 
@@ -53,8 +72,8 @@ const useFirebase = () => {
 
 
     return {
-        googleSignIn, logOut,
-        user, error, loading
+        googleSignIn, logOut, handleRegister, handleLogin,
+        user, setUser, error, setError, loading, setLoading, setUserName, verification
     }
 
 
