@@ -1,0 +1,11 @@
+.card:hover .texts{
+    background-color: rgba(19, 5, 5, 0.76);
+  
+}
+
+.card:hover .img{
+    transform: scale(.9);
+    overflow: hidden;
+    transition: 1.5s;
+    
+}
