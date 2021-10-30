@@ -25,7 +25,7 @@ const Header = () => {
                             className="d-inline-block align-top"
                         />
                     </Navbar.Brand>
-                    <Navbar.Brand as={Link} to="/home" className='fw-5'>Adventour</Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/home" className='fw-bold'>Adventour</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">

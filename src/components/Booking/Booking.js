@@ -11,7 +11,7 @@ const Booking = () => {
     const [item, setItem] = useState({});
     const { id } = useParams()
     useEffect(() => {
-        fetch(`http://localhost:5000/offers/${id}`)
+        fetch(`https://fathomless-everglades-23928.herokuapp.com/offers/${id}`)
             .then(res => res.json())
             .then(data => setItem(data))
     }, [])

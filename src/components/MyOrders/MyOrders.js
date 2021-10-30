@@ -40,7 +40,7 @@ const MyOrders = () => {
         <div>
             <Header></Header>
             <h1>You Booked for  {bookings.length} tours .</h1>
-            <div className='m-5'>
+            <div className='m-5 table-responsive'>
                 <Table striped bordered hover>
                     <thead>
                         <tr>

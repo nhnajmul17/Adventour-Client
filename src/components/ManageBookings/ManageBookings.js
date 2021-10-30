@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import Header from '../Shared/Header/Header';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import { faTrash, faPenAlt } from '@fortawesome/free-solid-svg-icons'
 
 const ManageBookings = () => {
 
@@ -41,7 +41,7 @@ const ManageBookings = () => {
     return (
         <div>
             <Header></Header>
-            <div className='m-5'>
+            <div className='m-5 table-responsive'>
                 <h2 className='mb-4'>Manage All Bookings</h2>
 
                 <Table striped bordered hover>
@@ -66,6 +66,7 @@ const ManageBookings = () => {
                                 <td>{dt._id}</td>
                                 <td>{dt.status}</td>
 
+                                <button className="btn bg-warning m-2"><FontAwesomeIcon icon={faPenAlt} className='text-dark' /> Update</button>
                                 <button onClick={() => handleDelete(dt._id)} className="btn bg-warning m-2"><FontAwesomeIcon icon={faTrash} className='text-dark' /> Delete</button>
                             </tr>
                         </tbody>
