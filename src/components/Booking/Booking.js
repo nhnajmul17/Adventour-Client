@@ -20,7 +20,7 @@ const Booking = () => {
     const onSubmit = data => {
         data.email = user?.email
         data.status = 'pending'
-        axios.post('http://localhost:5000/bookings', data)
+        axios.post('https://fathomless-everglades-23928.herokuapp.com/bookings', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Booking Successful')
@@ -32,15 +32,20 @@ const Booking = () => {
     return (
         <div >
             <Header></Header>
-            <div className='mt-3'>
+            <div className='m-3'>
                 <h1 className='text-warning'>Book for {item.name} Tour</h1>
                 <img className='rounded' src={item.picture} alt="" />
+                <p className='m-5'>{item.about}</p>
+                <h3 className='text-info'>For {item.days} tour you need only {item.price}</h3>
+                <h5>So Don't hesitate book now.</h5>
             </div>
 
             <div className='booking-form mt-3'>
                 <h2 className='text-warning'>Booking Form</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <input {...register("firstName", { required: true, maxLength: 20 })} placeholder='Your Name' />
+
+                    <input {...register("tourName")} placeholder='Tour place Name' />
+                    <input {...register("name", { required: true, maxLength: 20 })} placeholder='Your Name' />
                     <input {...register("mailling")} placeholder='Your Email / Address' />
                     <textarea {...register("message")} placeholder='Additonal Message' />
                     <input  {...register("phone")} placeholder='Phone' />

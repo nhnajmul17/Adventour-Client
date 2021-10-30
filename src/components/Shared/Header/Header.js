@@ -3,6 +3,8 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../../../images/logo.jpg'
 import useAuth from '../../Hooks/useAuth';
+import { HashLink } from 'react-router-hash-link';
+
 
 const Header = () => {
     const { user, logOut } = useAuth();
@@ -26,7 +28,8 @@ const Header = () => {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link as={Link} to="/home">Home</Nav.Link>
-                            <Nav.Link as={Link} to="/services">Services</Nav.Link>
+                            <Nav.Link as={HashLink} to="/home#offers">Offers</Nav.Link>
+                            {user?.email ? <Nav.Link as={Link} to="/myorders">My Orders</Nav.Link> : ''}
                         </Nav>
                         <Nav>
                             {user?.email ? <p className='text-white me-5'>User Name: {user.displayName} </p> : ''} {' '}

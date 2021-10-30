@@ -13,6 +13,7 @@ import Register from './components/Register/Register';
 import Services from './components/Services/Services';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Booking from './components/Booking/Booking';
+import MyOrders from './components/MyOrders/MyOrders';
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
             </Route>
             <PrivateRoute path="/booking/:id">
               <Booking></Booking>
+            </PrivateRoute>
+            <PrivateRoute path='/myorders'>
+              <MyOrders></MyOrders>
             </PrivateRoute>
             <PrivateRoute path='/services'>
               <Services></Services>
