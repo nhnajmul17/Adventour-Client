@@ -1,9 +1,10 @@
 import React from 'react';
 import { Card, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Offer.css'
 
 const Offer = (props) => {
-    const { name, place, days, price, picture, about } = props.offer;
+    const { name, place, days, price, picture, about, _id } = props.offer;
     return (
         <div >
             <Col>
@@ -21,7 +22,7 @@ const Offer = (props) => {
                                 <Card.Text className='fs-4 fw-1'>Price: {price}</Card.Text>
                                 <Card.Text >{about}</Card.Text>
 
-                                <button className='btn-danger rounded-pill'>BooK Now</button>
+                                <Link to={`/booking/${_id}`}><button className='btn-danger rounded-pill'>BooK Now</button></Link>
                             </div>
                         </Card.ImgOverlay>
 

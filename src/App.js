@@ -12,6 +12,7 @@ import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import Services from './components/Services/Services';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Booking from './components/Booking/Booking';
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
             <Route path='/home'>
               <Home></Home>
             </Route>
+            <PrivateRoute path="/booking/:id">
+              <Booking></Booking>
+            </PrivateRoute>
             <PrivateRoute path='/services'>
               <Services></Services>
             </PrivateRoute>
