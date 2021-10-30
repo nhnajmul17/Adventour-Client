@@ -29,7 +29,8 @@ const Header = () => {
                         <Nav className="me-auto">
                             <Nav.Link as={Link} to="/home">Home</Nav.Link>
                             <Nav.Link as={HashLink} to="/home#offers">Offers</Nav.Link>
-                            {user?.email ? <Nav.Link as={Link} to="/myorders">My Orders</Nav.Link> : ''}
+                            {user?.email ? <Nav.Link as={Link} to="/mybookings">My Bookings</Nav.Link> : ''}
+                            {user?.email ? <Nav.Link as={Link} to="/managebookings">Manage All Bookings</Nav.Link> : ''}
                         </Nav>
                         <Nav>
                             {user?.email ? <p className='text-white me-5'>User Name: {user.displayName} </p> : ''} {' '}

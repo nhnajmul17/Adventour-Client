@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
-import useAuth from '../Hooks/useAuth';
 import Header from '../Shared/Header/Header';
 
-const MyOrders = () => {
-    const { user } = useAuth()
+const ManageBookings = () => {
 
     const [bookings, setBookings] = useState([])
-
     useEffect(() => {
-        fetch(`https://fathomless-everglades-23928.herokuapp.com/mybookings/${user?.email}`)
+        fetch('https://fathomless-everglades-23928.herokuapp.com/bookings')
             .then(res => res.json())
             .then(data => setBookings(data))
     }, [])
@@ -17,7 +14,7 @@ const MyOrders = () => {
     const handleDelete = (id) => {
         const confirm = window.confirm('Do you really wants to delete')
         if (confirm) {
-            fetch(`https://fathomless-everglades-23928.herokuapp.com/mybookings/${id}`, {
+            fetch(`https://fathomless-everglades-23928.herokuapp.com/bookings/${id}`, {
                 method: "DELETE"
             })
                 .then((res) => res.json())
@@ -34,10 +31,12 @@ const MyOrders = () => {
 
 
     };
+
+
     return (
         <div>
             <Header></Header>
-            <h1>You Booked for  {bookings.length} tours .</h1>
+            <h2>Manage All Bookings</h2>
             <div className='m-5'>
                 <Table striped bordered hover>
                     <thead>
@@ -45,7 +44,7 @@ const MyOrders = () => {
                             <th>#</th>
                             <th>Tour Name</th>
                             <th>Booked By</th>
-                            <th>Phone Number</th>
+                            <th>Email</th>
                             <th>Booking ID</th>
                             <th>Order Status</th>
                             <th>Action</th>
@@ -57,7 +56,7 @@ const MyOrders = () => {
                                 <td>{index}</td>
                                 <td>{dt.tourName}</td>
                                 <td>{dt.name}</td>
-                                <td>{dt.phone}</td>
+                                <td>{dt.email}</td>
                                 <td>{dt._id}</td>
                                 <td>{dt.status}</td>
 
@@ -71,4 +70,4 @@ const MyOrders = () => {
     );
 };
 
-export default MyOrders;
+export default ManageBookings;
