@@ -1,0 +1,9 @@
+.hov:hover .textbg{
+    background-color: rgba(19, 5, 5, 0.76);
+}
+
+.hov:hover .imgbg{
+    transform:scale(0.9);
+    overflow:hidden;
+    transition: 1.5s
+}

@@ -15,6 +15,7 @@ import Booking from './components/Booking/Booking';
 import MyOrders from './components/MyOrders/MyOrders';
 import ManageBookings from './components/ManageBookings/ManageBookings';
 import AddOffer from './components/AddOffer/AddOffer';
+import NewsDetail from './components/NewsDetail/NewsDetail';
 
 function App() {
   return (
@@ -40,6 +41,9 @@ function App() {
             <PrivateRoute path='/addoffer'>
               <AddOffer></AddOffer>
             </PrivateRoute>
+            <Route path='/news'>
+              <NewsDetail></NewsDetail>
+            </Route>
             <Route path='/register'>
               <Register></Register>
             </Route>

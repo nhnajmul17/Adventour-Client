@@ -52,7 +52,7 @@
   {
     "key": 6,
     "picture": "https://i.ibb.co/8zm9sWB/place6.jpg",
-    "category": "Special",
+    "category": "feature",
     "place": "Hungary",
     "days": "10 days",
     "price": "$3000",
@@ -61,55 +61,39 @@
   },
   {
     "key": 7,
-    "picture": "https://i.ibb.co/cJv9bw7/traumology.webp",
-    "category": "General",
-    "place": "Dr. Dan Washington",
-    "days": "Prostheses Specialist",
-    "price": "$22.99",
-    "name": "Traumatology",
-    "about": "Traumatology: The branch of surgery that deals with injured patients, usually on an emergency basis. Patients who have suffered significant physical trauma, as from a car accident, may be cared for in a traumatology unit.\r\n"
+    "picture": "https://i.ibb.co/Xst6NB4/news1.jpg",
+    "title": "One Day Bike Tour to Silkworm Island",
+    "about": "Sit dolore tempor veniam duis et adipisicing irure fugiat eiusmod amet reprehenderit magna. Qui est aliqua sint sit ex cupidatat dolor veniam do exercitation pariatur.\r\n"
   },
   {
     "key": 8,
-    "picture": "https://i.ibb.co/wgtWhxX/xray.webp ",
-    "category": "General",
-    "place": "Dr. Linda Jackson",
-    "days": "Therapist",
-    "price": "$9.99",
-    "name": "Xray",
-    "about": "X-rays are a type of radiation called electromagnetic waves. X-ray imaging creates pictures of the inside of your body. The images show the parts of your body in different shades of black and white. ... The most familiar use of x-rays is checking for fractures (broken bones), but x-rays are also used in other ways.\r\n"
+    "picture": "https://i.ibb.co/vYkfVRZ/news2.jpg",
+    "title": "Jeju Backcountry Skiing. One Powder Day",
+    "about": "Sit dolore tempor veniam duis et adipisicing irure fugiat eiusmod amet reprehenderit magna. Qui est aliqua sint sit ex cupidatat dolor veniam do exercitation pariatur.\r\n"
   },
   {
     "key": 9,
-    "picture": "https://i.ibb.co/0DpwZZD/emergency.jpg",
-    "category": "feature",
-    "price": 6.99,
-    "name": "Emergency Service",
-    "about": "Get Emergency service anytime from anywhere. \r\n"
+    "picture": "https: //i.ibb.co/vqpGzqV/news3.jpg",
+    "title": "Outdoor in Korea got visa easily.",
+    "about": "Amet consequat voluptate nisi dolor sint ea laboris deserunt do quis. Cupidatat veniam veniam eiusmod proident ea occaecat reprehenderit amet ex ea. \r\n"
   },
   {
     "key": 10,
-    "picture": "https://i.ibb.co/DKdRMrD/modernequipment.jpg",
-    "category": "feature",
-    "price": 8.99,
-    "name": "Modern Equipment",
-    "about": "We use only the most modern medical equipment, skills for modern trends and innovations introducing into our practice.\r\n"
+    "picture": "https: //i.ibb.co/vZcqxsh/news4.jpg",
+    "title": "The Best Camping ! Taean Campsite, Manripo Beach",
+    "about": "Amet consequat voluptate nisi dolor sint ea laboris deserunt do quis. Cupidatat veniam veniam eiusmod proident ea occaecat reprehenderit amet ex ea..\r\n"
   },
   {
     "key": 11,
-    "picture": "https://i.ibb.co/3CYkWZM/healthmonitoring.jpg",
-    "category": "feature",
-    "price": 7.99,
-    "name": "Health Monitoring",
-    "about": "We have developed special programs allowing our clients to periodically visit a place to monitor their health.\r\n"
+    "picture": "https: //i.ibb.co/W6S5C0f/news5.jpg",
+    "title": "North Hanriver Bike Riding - Seoul to Chuncheon",
+    "about": "Labore voluptate duis esse nisi fugiat occaecat eu non eu esse labore cillum reprehenderit. Occaecat deserunt et ea sit tempor reprehenderit incididunt ullamco Lorem cillum magna commodo eiusmod.\r\n"
   },
   {
     "key": 12,
-    "picture": "https://i.ibb.co/TwCy6gg/support.jpg",
-    "category": "feature",
-    "price": 15.99,
-    "name": "24-7 Hours Service",
-    "about": "We provide 24*7 Medical service.\r\n"
+    "picture": "https: //i.ibb.co/ncX9TRC/news6.jpg",
+    "title": "Seoul Moonlight Tour",
+    "about": "Labore voluptate duis esse nisi fugiat occaecat eu non eu esse labore cillum reprehenderit. Occaecat deserunt et ea sit tempor reprehenderit incididunt ullamco Lorem cillum magna commodo eiusmod.\r\n"
   },
   {
     "key": 13,
@@ -200,3 +184,9 @@
     "about": "Sit dolore tempor veniam duis et adipisicing irure fugiat eiusmod amet reprehenderit magna. Qui est aliqua sint sit ex cupidatat dolor veniam do exercitation pariatur. Amet consequat voluptate nisi dolor sint ea laboris deserunt do quis. Cupidatat veniam veniam eiusmod proident ea occaecat reprehenderit amet ex ea. Excepteur ullamco esse sunt dolor voluptate dolor. Labore voluptate duis esse nisi fugiat occaecat eu non eu esse labore cillum reprehenderit. Occaecat deserunt et ea sit tempor reprehenderit incididunt ullamco Lorem cillum magna commodo eiusmod.\r\n"
   }
 ]
+
+https: //i.ibb.co/Xst6NB4/news1.jpg
+
+https: //i.ibb.co/vqpGzqV/news3.jpg
+
+https: //i.ibb.co/W6S5C0f/news5.jpg
