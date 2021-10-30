@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import useAuth from '../Hooks/useAuth';
 import Header from '../Shared/Header/Header';
 import { useHistory, useLocation } from "react-router";
+import Footer from '../Shared/Footer/Footer';
 
 
 
@@ -63,20 +64,24 @@ const Login = () => {
     return (
         <div >
             <Header></Header>
-            <h1>Please Sign In </h1>
-            <form onSubmit={handleLoginbtn}>
-                <label htmlFor="">Email</label><br />
-                <input onBlur={handleEmail} type="email" name="" id="" /><br />
-                <label htmlFor="">Password</label><br />
-                <input onBlur={handlePassword} type="password" name="" id="" /><br /><br />
-                <input type="submit" value="Login" />
+            <div className='mb-5'>
+                <h1>Please Sign In </h1>
+                <form onSubmit={handleLoginbtn}>
+                    <label htmlFor="">Email</label><br />
+                    <input onBlur={handleEmail} type="email" name="" id="" /><br />
+                    <label htmlFor="">Password</label><br />
+                    <input onBlur={handlePassword} type="password" name="" id="" /><br /><br />
+                    <input type="submit" value="Login" />
 
-            </form>
-            <br /><br />
+                </form>
+                <br /><br />
 
-            <p>New To this Website? <Link to='/register'>Register now </Link> </p>
-            <button className='btn-warning rounded-pill fs-4' onClick={handlegoogleSignIn}>Google</button>
-            <p className='text-danger'>{error}</p>
+                <p>New To this Website? <Link to='/register'>Register now </Link> </p>
+                <p>Or SignIn with</p>
+                <button className='btn-warning rounded-pill fs-4' onClick={handlegoogleSignIn}>Google</button>
+                <p className='text-danger'>{error}</p>
+            </div>
+            <Footer></Footer>
         </div>
     );
 };

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import useAuth from '../Hooks/useAuth';
 import Header from '../Shared/Header/Header';
 import { useHistory, useLocation } from "react-router";
+import Footer from '../Shared/Footer/Footer';
 
 
 
@@ -74,7 +75,7 @@ const Register = () => {
             <p>Or SignIn with</p>
             <button className='btn-warning rounded-pill fs-4' onClick={googleSignIn}>Google</button>
             <p className='text-danger'>{error}</p>
-
+            <Footer></Footer>
         </div>
     );
 };

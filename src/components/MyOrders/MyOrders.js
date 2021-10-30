@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import useAuth from '../Hooks/useAuth';
 import Header from '../Shared/Header/Header';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 const MyOrders = () => {
     const { user } = useAuth()
@@ -61,12 +63,13 @@ const MyOrders = () => {
                                 <td>{dt._id}</td>
                                 <td>{dt.status}</td>
 
-                                <button onClick={() => handleDelete(dt._id)} className="btn bg-warning p-2">Delete</button>
+                                <button onClick={() => handleDelete(dt._id)} className="btn bg-warning m-2 "><FontAwesomeIcon icon={faTrash} className='text-dark' /> Delete</button>
                             </tr>
                         </tbody>
                     ))}
                 </Table>
             </div>
+
         </div>
     );
 };

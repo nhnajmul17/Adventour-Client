@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 import logo from '../../../images/logo.jpg'
 import useAuth from '../../Hooks/useAuth';
 import { HashLink } from 'react-router-hash-link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSignInAlt, faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
 
 
 const Header = () => {
@@ -35,7 +37,7 @@ const Header = () => {
                         </Nav>
                         <Nav>
                             {user?.email ? <p className='text-white me-5'>User Name: {user.displayName} </p> : ''} {' '}
-                            {user?.email ? <button onClick={logOut} className='btn-danger rounded'>logout</button> : <Nav.Link as={Link} to="login">  <button className='btn-danger rounded'>Login</button> </Nav.Link>}
+                            {user?.email ? <button onClick={logOut} className='btn-danger rounded'>logout <FontAwesomeIcon icon={faSignOutAlt} className='text-dark' /></button> : <Nav.Link as={Link} to="login">  <button className='btn-danger rounded'>Login <FontAwesomeIcon icon={faSignInAlt} className='text-dark' /></button> </Nav.Link>}
 
                         </Nav>
                     </Navbar.Collapse>

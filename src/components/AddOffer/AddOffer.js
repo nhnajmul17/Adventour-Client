@@ -3,11 +3,12 @@ import Header from '../Shared/Header/Header';
 import { useForm } from "react-hook-form";
 import './AddOffer.css'
 import axios from 'axios';
+import Footer from '../Shared/Footer/Footer';
 
 const AddOffer = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        axios.post('http://localhost:5000/offers', data)
+        axios.post('https://fathomless-everglades-23928.herokuapp.com/offers', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Offer Added Successfully')
@@ -21,7 +22,7 @@ const AddOffer = () => {
             <Header></Header>
             <h2 className='mt-3 text-success'>Add A New Offer</h2>
 
-            <div className='offer-form mt-3'>
+            <div className='offer-form mt-3 mb-5'>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input {...register("picture")} placeholder='Place a image link here' />
                     <input {...register("name")} placeholder='Tour Name' />
@@ -33,6 +34,7 @@ const AddOffer = () => {
                     <input type="submit" />
                 </form>
             </div>
+            <Footer></Footer>
         </div>
     );
 };
