@@ -23,7 +23,7 @@ const Header = () => {
                             className="d-inline-block align-top"
                         />
                     </Navbar.Brand>
-                    <Navbar.Brand href="#home" className='fw-5'>Adventour</Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/home" className='fw-5'>Adventour</Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
@@ -31,6 +31,7 @@ const Header = () => {
                             <Nav.Link as={HashLink} to="/home#offers">Offers</Nav.Link>
                             {user?.email ? <Nav.Link as={Link} to="/mybookings">My Bookings</Nav.Link> : ''}
                             {user?.email ? <Nav.Link as={Link} to="/managebookings">Manage All Bookings</Nav.Link> : ''}
+                            {user?.email ? <Nav.Link as={Link} to="/addoffer">Add a new Offer</Nav.Link> : ''}
                         </Nav>
                         <Nav>
                             {user?.email ? <p className='text-white me-5'>User Name: {user.displayName} </p> : ''} {' '}

@@ -33,10 +33,10 @@ const Booking = () => {
         <div >
             <Header></Header>
             <div className='m-3'>
-                <h1 className='text-warning'>Book for {item.name} Tour</h1>
+                <h1 className='text-warning'>Book for {item?.name} Tour</h1>
                 <img className='rounded' src={item.picture} alt="" />
                 <p className='m-5'>{item.about}</p>
-                <h3 className='text-info'>For {item.days} tour you need only {item.price}</h3>
+                <h3 className='text-info'>For {item.days} days tour you need only ${item.price}</h3>
                 <h5>So Don't hesitate book now.</h5>
             </div>
 

@@ -10,11 +10,11 @@ import Error from './components/Error/Error';
 import AuthProvider from './components/Context/AuthProvider';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
-import Services from './components/Services/Services';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Booking from './components/Booking/Booking';
 import MyOrders from './components/MyOrders/MyOrders';
 import ManageBookings from './components/ManageBookings/ManageBookings';
+import AddOffer from './components/AddOffer/AddOffer';
 
 function App() {
   return (
@@ -37,8 +37,8 @@ function App() {
             <PrivateRoute path='/managebookings'>
               <ManageBookings></ManageBookings>
             </PrivateRoute>
-            <PrivateRoute path='/services'>
-              <Services></Services>
+            <PrivateRoute path='/addoffer'>
+              <AddOffer></AddOffer>
             </PrivateRoute>
             <Route path='/register'>
               <Register></Register>
