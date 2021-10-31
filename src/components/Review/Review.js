@@ -11,7 +11,7 @@ const Review = () => {
                 <Carousel fade variant="dark">
                     <Carousel.Item>
                         <Carousel.Caption className="overflow-hidden">
-                            <h5 className='fw-bold fst-italic text-white'>Adventourteam were very fast and efficient in responding to any emails and also with updating me with my travel itinerary, etc. Loved being able yo book everything in the one place, in one transaction. I will most definitely be using Travel Online for my holiday bookings again in the future!</h5>
+                            <h5 className='fw-bold fst-italic text-white'>Adventour team were very fast and efficient in responding to any emails and also with updating me with my travel itinerary, etc. Loved being able yo book everything in the one place, in one transaction. I will most definitely be using Travel Online for my holiday bookings again in the future!</h5>
                             <p className='fw-bold'>- Joshua Braidwood</p>
                             <p className='fw-bold'><small>26th Oct 2021</small></p>
                         </Carousel.Caption>
