@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import './Booking.css'
 import useAuth from '../Hooks/useAuth';
 import axios from 'axios';
+import Footer from '../Shared/Footer/Footer';
 
 const Booking = () => {
     const { user } = useAuth();
@@ -40,21 +41,22 @@ const Booking = () => {
                 <h5>So Don't hesitate book now.</h5>
             </div>
 
-            <div className='booking-form mt-3'>
+            <div className='booking-form mt-3 mb-5'>
                 <h2 className='text-warning'>Booking Form</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
 
                     <input {...register("name", { required: true, maxLength: 20 })} required defaultValue={user?.displayName} placeholder='Your Name' />
                     <input {...register("mailling")} required defaultValue={user?.email} placeholder='Your Email / Address' />
                     <input {...register("tourName")} required placeholder='Tour place Name' />
-                    <textarea {...register("message")} placeholder='Additonal Message' />
+                    <input {...register("date")} type='date' required placeholder='Tour place Name' />
                     <input  {...register("phone")} required placeholder='Phone Number' />
+                    <textarea {...register("message")} placeholder='Additonal Message' />
 
                     <input type="submit" />
                 </form>
             </div>
 
-
+            <Footer></Footer>
         </div>
     );
 };
