@@ -17,7 +17,7 @@ const MyOrders = () => {
     }, [])
 
     const handleDelete = (id) => {
-        const confirm = window.confirm('Do you really wants to delete')
+        const confirm = window.confirm('If you Delete your data, it will be removed permanently.')
         if (confirm) {
             fetch(`https://fathomless-everglades-23928.herokuapp.com/mybookings/${id}`, {
                 method: "DELETE"
@@ -27,7 +27,7 @@ const MyOrders = () => {
 
 
                     if (data.deletedCount) {
-                        alert('deleted successfully')
+                        alert('Deleted successfully.')
                         window.location.reload()
 
                     }

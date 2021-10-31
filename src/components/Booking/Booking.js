@@ -21,10 +21,11 @@ const Booking = () => {
     const onSubmit = data => {
         data.email = user?.email
         data.status = 'pending'
+        data.tourName = item.name
         axios.post('https://fathomless-everglades-23928.herokuapp.com/bookings', data)
             .then(res => {
                 if (res.data.insertedId) {
-                    alert('Booking Successful')
+                    alert('Booking Successful.')
                     reset();
                 }
             })
@@ -47,7 +48,7 @@ const Booking = () => {
 
                     <input {...register("name", { required: true, maxLength: 20 })} required defaultValue={user?.displayName} placeholder='Your Name' />
                     <input {...register("mailling")} required defaultValue={user?.email} placeholder='Your Email / Address' />
-                    <input {...register("tourName", { required: true })} required defaultValue={item.name} placeholder='Tour place Name' />
+                    <input {...register("tourName")} required defaultValue={item.name} placeholder='Tour place Name' />
                     <input {...register("date")} type='date' required placeholder='Tour place Name' />
                     <input  {...register("phone", { required: true })} required placeholder='Phone Number' />
                     <textarea {...register("message")} placeholder='Additonal Message' />

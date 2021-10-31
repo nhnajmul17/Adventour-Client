@@ -14,7 +14,7 @@ const ManageBookings = () => {
     }, [])
 
     const handleDelete = (id) => {
-        const confirm = window.confirm('Do you really wants to delete')
+        const confirm = window.confirm('If Delete data, it will be removed permanently.')
         if (confirm) {
             fetch(`https://fathomless-everglades-23928.herokuapp.com/bookings/${id}`, {
                 method: "DELETE"
@@ -23,7 +23,7 @@ const ManageBookings = () => {
                 .then((data) => {
 
                     if (data.deletedCount) {
-                        alert('deleted successfully')
+                        alert('Deleted successfully.')
 
                         const remaining = bookings.filter(booking => booking._id !== id)
                         setBookings(remaining)
