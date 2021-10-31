@@ -51,6 +51,7 @@ const ManageBookings = () => {
                             <th>Tour Name</th>
                             <th>Booked By</th>
                             <th>Email</th>
+                            <th>Date</th>
                             <th>Booking ID</th>
                             <th>Order Status</th>
                             <th>Action</th>
@@ -63,6 +64,7 @@ const ManageBookings = () => {
                                 <td>{dt.tourName}</td>
                                 <td>{dt.name}</td>
                                 <td>{dt.email}</td>
+                                <td>{dt.date}</td>
                                 <td>{dt._id}</td>
                                 <td>{dt.status}</td>
 
