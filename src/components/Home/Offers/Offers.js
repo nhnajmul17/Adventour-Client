@@ -1,15 +1,22 @@
 import React, { useEffect, useState } from 'react';
-import { Row } from 'react-bootstrap';
+import { Row, Spinner } from 'react-bootstrap';
 import Offer from './Offer/Offer';
 
 const Offers = () => {
 
     const [offers, setOffers] = useState([])
+    const [isloading, setIsloading] = useState(true)
 
     useEffect(() => {
+
         fetch('https://fathomless-everglades-23928.herokuapp.com/offers')
             .then(res => res.json())
-            .then(data => setOffers(data))
+            .then(data => {
+                setOffers(data)
+                setIsloading(false)
+            })
+
+
     }, [])
 
 
@@ -17,13 +24,14 @@ const Offers = () => {
 
     return (
 
+
         <div id='offers' className='mt-5'>
 
             <h1 className='fw-1'>BEST OFFERS </h1>
             <p className='text-warning fw-bold'>Checkout Our Best Promotion Tour</p>
 
 
-            <div className='m-5'>
+            {isloading ? <Spinner animation="border" variant="danger" /> : <div className='m-5'>
                 <Row xs={1} md={2} className="g-4">
                     {
                         offers.map(offer => <Offer
@@ -34,6 +42,7 @@ const Offers = () => {
 
                 </Row>
             </div>
+            }
         </div>
     );
 };
