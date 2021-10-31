@@ -27,15 +27,28 @@ const ManageBookings = () => {
 
                         const remaining = bookings.filter(booking => booking._id !== id)
                         setBookings(remaining)
-
-
                     }
                 });
-
         }
-
-
     };
+
+    const handleUpdate = (id) => {
+        const url = `https://fathomless-everglades-23928.herokuapp.com/bookings/${id}`
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(bookings)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount > 0) {
+                    alert('Updated Successfully')
+                    window.location.reload();
+                }
+            })
+    }
 
 
     return (
@@ -68,7 +81,7 @@ const ManageBookings = () => {
                                 <td>{dt._id}</td>
                                 <td>{dt.status}</td>
 
-                                <button className="btn bg-warning m-2"><FontAwesomeIcon icon={faPenAlt} className='text-dark' /> Update</button>
+                                <button onClick={() => handleUpdate(dt._id)} className="btn bg-warning m-2"><FontAwesomeIcon icon={faPenAlt} className='text-dark' /> Update</button>
                                 <button onClick={() => handleDelete(dt._id)} className="btn bg-warning m-2"><FontAwesomeIcon icon={faTrash} className='text-dark' /> Delete</button>
                             </tr>
                         </tbody>
