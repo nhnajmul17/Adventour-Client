@@ -28,6 +28,7 @@ const MyOrders = () => {
 
                     if (data.deletedCount) {
                         alert('deleted successfully')
+                        window.location.reload()
 
                     }
                 });

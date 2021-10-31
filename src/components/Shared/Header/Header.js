@@ -34,6 +34,10 @@ const Header = () => {
                             {user?.email ? <Nav.Link as={Link} to="/mybookings">My Bookings</Nav.Link> : ''}
                             {user?.email ? <Nav.Link as={Link} to="/managebookings">Manage All Bookings</Nav.Link> : ''}
                             {user?.email ? <Nav.Link as={Link} to="/addoffer">Add a new Offer</Nav.Link> : ''}
+                            <Nav.Link as={Link} to="/about">About</Nav.Link>
+                            <Nav.Link as={Link} to="/faq">Faq</Nav.Link>
+
+
                         </Nav>
                         <Nav>
                             {user?.email ? <p className='text-white me-5'>User Name: {user.displayName} </p> : ''} {' '}

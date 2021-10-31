@@ -16,6 +16,8 @@ import MyOrders from './components/MyOrders/MyOrders';
 import ManageBookings from './components/ManageBookings/ManageBookings';
 import AddOffer from './components/AddOffer/AddOffer';
 import NewsDetail from './components/NewsDetail/NewsDetail';
+import Faq from './components/Faq/Faq';
+import About from './components/About/About';
 
 function App() {
   return (
@@ -43,6 +45,12 @@ function App() {
             </PrivateRoute>
             <Route path='/news'>
               <NewsDetail></NewsDetail>
+            </Route>
+            <Route path='/about'>
+              <About></About>
+            </Route>
+            <Route path='/faq'>
+              <Faq></Faq>
             </Route>
             <Route path='/register'>
               <Register></Register>

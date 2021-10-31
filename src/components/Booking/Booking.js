@@ -44,11 +44,11 @@ const Booking = () => {
                 <h2 className='text-warning'>Booking Form</h2>
                 <form onSubmit={handleSubmit(onSubmit)}>
 
-                    <input {...register("tourName")} placeholder='Tour place Name' />
-                    <input {...register("name", { required: true, maxLength: 20 })} placeholder='Your Name' />
-                    <input {...register("mailling")} placeholder='Your Email / Address' />
+                    <input {...register("name", { required: true, maxLength: 20 })} required defaultValue={user?.displayName} placeholder='Your Name' />
+                    <input {...register("mailling")} required defaultValue={user?.email} placeholder='Your Email / Address' />
+                    <input {...register("tourName")} required placeholder='Tour place Name' />
                     <textarea {...register("message")} placeholder='Additonal Message' />
-                    <input  {...register("phone")} placeholder='Phone' />
+                    <input  {...register("phone")} required placeholder='Phone Number' />
 
                     <input type="submit" />
                 </form>

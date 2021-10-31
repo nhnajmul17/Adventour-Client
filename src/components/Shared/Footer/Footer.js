@@ -19,9 +19,9 @@ const Footer = () => {
                 <ul className='text-secondary'>
                     <h3 className='text-secondary'>Pages</h3>
                     <Link to='/home'><li>Home</li></Link>
-                    <Link to='/home'><li>Department</li></Link>
-                    <Link to='/home'><li>About Us</li></Link>
-                    <Link to='/home'><li>Faq</li></Link>
+                    <Link to='/home'><li>Offers</li></Link>
+                    <Link to='/about'><li>About Us</li></Link>
+                    <Link to='/faq'><li>Faq</li></Link>
                     <Link to='/home'><li>Contact</li></Link>
                 </ul>
 
