@@ -17,7 +17,7 @@ const Banner = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h1 className='fw-1 text-white'>City breaks to suit every style</h1>
+                        <h1 className='fw-1 text-white'>City break's to suit every style</h1>
                         <h3 className='text-white'>Now is the perfect time to plan an easy city break to an old favorite or somewhere new.</h3>
                     </Carousel.Caption>
                 </Carousel.Item>
