@@ -9,7 +9,7 @@ const Offers = () => {
 
     useEffect(() => {
 
-        fetch('https://fathomless-everglades-23928.herokuapp.com/offers')
+        fetch('https://adventour-server.onrender.com/offers')
             .then(res => res.json())
             .then(data => {
                 setOffers(data)

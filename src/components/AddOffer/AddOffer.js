@@ -8,7 +8,7 @@ import Footer from '../Shared/Footer/Footer';
 const AddOffer = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        axios.post('https://fathomless-everglades-23928.herokuapp.com/offers', data)
+        axios.post('https://adventour-server.onrender.com/offers', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Offer Added Successfully')

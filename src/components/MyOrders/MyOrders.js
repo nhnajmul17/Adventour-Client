@@ -11,7 +11,7 @@ const MyOrders = () => {
     const [bookings, setBookings] = useState([])
 
     useEffect(() => {
-        fetch(`https://fathomless-everglades-23928.herokuapp.com/mybookings/${user?.email}`)
+        fetch(`https://adventour-server.onrender.com/mybookings/${user?.email}`)
             .then(res => res.json())
             .then(data => setBookings(data))
     }, [])
@@ -19,7 +19,7 @@ const MyOrders = () => {
     const handleDelete = (id) => {
         const confirm = window.confirm('If you Delete your data, it will be removed permanently.')
         if (confirm) {
-            fetch(`https://fathomless-everglades-23928.herokuapp.com/mybookings/${id}`, {
+            fetch(`https://adventour-server.onrender.com/mybookings/${id}`, {
                 method: "DELETE"
             })
                 .then((res) => res.json())

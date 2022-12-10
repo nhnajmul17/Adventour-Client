@@ -5,7 +5,7 @@ import News from './News/News';
 const NewsUpdates = () => {
     const [newses, setNewses] = useState([])
     useEffect(() => {
-        fetch('https://fathomless-everglades-23928.herokuapp.com/news')
+        fetch('https://adventour-server.onrender.com/news')
             .then(res => res.json())
             .then(data => setNewses(data))
     }, [])

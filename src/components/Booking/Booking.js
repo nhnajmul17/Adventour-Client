@@ -12,7 +12,7 @@ const Booking = () => {
     const [item, setItem] = useState({});
     const { id } = useParams()
     useEffect(() => {
-        fetch(`https://fathomless-everglades-23928.herokuapp.com/offers/${id}`)
+        fetch(`https://adventour-server.onrender.com/offers/${id}`)
             .then(res => res.json())
             .then(data => setItem(data))
     }, [])
@@ -22,7 +22,7 @@ const Booking = () => {
         data.email = user?.email
         data.status = 'pending'
         data.tourName = item.name
-        axios.post('https://fathomless-everglades-23928.herokuapp.com/bookings', data)
+        axios.post('https://adventour-server.onrender.com/bookings', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Booking Successful.')
